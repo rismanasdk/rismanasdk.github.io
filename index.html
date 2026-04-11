@@ -6,24 +6,48 @@
   <title>Risman Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body id="body" class="bg-gray-900 text-white font-sans transition duration-300">
 
-  <section class="py-20 text-center">
-    <h2 class="text-4xl font-bold mb-4">Hi, I'm Risman Hadi Nata</h2>
-    <p class="text-gray-400 mb-6">Software Developer</p>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full bg-gray-900/80 backdrop-blur z-50">
+    <div class="max-w-5xl mx-auto flex justify-between p-4">
+      <h1 class="font-bold">Risman</h1>
+      <div class="flex gap-4">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <button onclick="toggleTheme()">🌙</button>
+      </div>
+    </div>
+  </nav>
 
-    <div class="flex justify-center gap-4">
-      <a href="https://github.com/rismanasdk" target="_blank" class="px-6 py-2 bg-white text-black rounded-xl font-semibold hover:scale-105 transition">GitHub</a>
-      <a href="https://instagram.com/rismaann14" target="_blank" class="px-6 py-2 border border-gray-500 rounded-xl hover:bg-gray-800 transition">Instagram</a>
+  <!-- HERO -->
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <h2 class="text-4xl font-bold mb-4">
+      Hi, I'm <span class="text-blue-400">Risman Hadi Nata</span>
+    </h2>
+
+    <p id="typing" class="text-gray-400 mb-6 text-lg"></p>
+
+    <div class="flex gap-4">
+      <a href="https://github.com/rismanasdk" target="_blank"
+        class="px-6 py-2 bg-white text-black rounded-xl hover:scale-105 transition">
+        GitHub
+      </a>
+      <a href="https://instagram.com/rismaann14" target="_blank"
+        class="px-6 py-2 border border-gray-500 rounded-xl hover:bg-gray-800 transition">
+        Instagram
+      </a>
     </div>
   </section>
 
-  <section id="about" class="max-w-3xl mx-auto px-6 py-16">
+  <!-- ABOUT -->
+  <section id="about" class="max-w-3xl mx-auto px-6 py-20 opacity-0 translate-y-10 transition duration-700">
     <h3 class="text-2xl font-semibold mb-4">About Me</h3>
     <p class="text-gray-400 leading-relaxed">
-      I'm a student in Software Developer who enjoys learning about Linux, networking, and cybersecurity. 
-      I also build small applications and experiment with different technologies to improve my skills.
+      I'm a student in Software Developer who enjoys Linux, networking, and cybersecurity.
     </p>
   </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
